@@ -1,0 +1,1564 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>Deliverando : Food to your Home Website</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Flavorful Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    
+    <!-- //for-mobile-apps -->
+    <link href="/template/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Portfolio-CSS -->
+    <link rel="stylesheet" href="/template/web/css/swipebox.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/template/web/css/flexslider.css" type="text/css" media="screen" property="" />
+    <link href="/template/web/css/services.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="/template/web/css/jquery-ui.css" />
+    <link href="/template/web/css/ziehharmonika.css" rel="stylesheet" type="text/css">
+    <link href="/template/web/css/team.css" rel="stylesheet" type="text/css">
+    <link href="/template/web/css/JiSlider.css" rel="stylesheet">
+    <link href="/template/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/smart_login/web/css/style.css" rel="stylesheet" type="text/css" media="all">
+   
+    
+    <!-- font-awesome icons -->
+    <link href="/template/web/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+</head>
+@{
+    Layout = null;
+}
+<body>
+    <div class="main" id="home">
+        <!-- banner -->
+        <div class="header-bottom">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="logo">
+                        <h1><a class="navbar-brand" href="index.html"><span>D</span>eliverando <i class="fa fa-spoon" aria-hidden="true"></i> <p>Food...Ready to Eat</p></a></h1>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                    <nav>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a class="scroll" href="index.html">Home</a></li>
+                            <li><a href="#about" class="scroll hvr-bounce-to-bottom">About</a></li>
+                            <li><a href="#menu" class="scroll hvr-bounce-to-bottom">Menu</a></li>
+                            <li><a href="#login" class="scroll hvr-bounce-to-bottom">Login</a></li>
+                            <li><a href="#service" class="scroll hvr-bounce-to-bottom">Services</a></li>
+                            <li><a href="#specials" class="scroll hvr-bounce-to-bottom">Specials</a></li>
+                            <li><a href="#contact" class="scroll hvr-bounce-to-bottom">Contact Us</a></li>
+                            <li style="margin-left:10px; margin-top:16px; font-style:oblique;font-size:17px; font-family: 'Poppins', sans-serif; font-weight: 600;color:black;">
+                                Welcome @if (Session["currentUser"] != null)
+                                {  @Session["currentUser"].ToString()}
+                            </li>
+                            <li style="margin-left:10px; margin-top:0px; font-style:oblique;font-size:17px; font-family: 'Poppins', sans-serif; font-weight: 600;color:white;">
+                                @if (Session["currentUser"] != null)
+                                { @Html.ActionLink("Log Out", "LogOut", "Client", new { @style = "color:black;" }) }
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner-silder">
+        <div id="JiSlider" class="jislider">
+            <ul>
+                <li>
+                    <div class="w3layouts-banner-top">
+
+                        <div class="container">
+                            <div class="agileits-banner-info">
+                                <span>Deliverando</span>
+                                <h3>Fresh Food's Delivery from <span style="font-weight:bold;">Hannover'</span>s Best Restaurants</h3>
+                                <p>The meals you love, delivered with care</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="w3layouts-banner-top w3layouts-banner-top1">
+                        <div class="container">
+                            <div class="agileits-banner-info">
+                                <span>Quick</span>
+                                <h3> Food delivery</h3>
+                                <p> At Deliverando the restaurant selection is much greater, there’s everything from typical Mexican dishes, traditional Austrian cuisine, pizzas, burgers and sushi.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="w3layouts-banner-top w3layouts-banner-top2">
+                        <div class="container">
+                            <div class="agileits-banner-info">
+                                <span>Amazing</span>
+                                <h3>chefs</h3>
+                                <p>The skills  crews use to prep and cook our food are the same techniques used by classically trained chefs everywhere.</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- //banner -->
+    <!-- about -->
+    <div class="about" id="about">
+        <div class="about-w3lsrow">
+
+            <div class="col-md-7 col-sm-7 w3about-img">
+                <div class="w3about-text">
+                    <h2 class="w3l-subtitle">About Us</h2>
+                    <p>With short delivery times and a friendly service, Deliverando ticks all the right boxes when it comes to take away deliveries. There’s also the option of collective orders with work colleagues, ideal if you’re still at the office and feeling a little peckish. Once you’ve found a meal of your choice, place an order and pay online through Deliverando’s secure platform.</p>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+    <!-- login -->
+        <div class="login" id="login">
+                @*@RenderPage("~/Views/Home/Login.cshtml")*@
+                <link href="~/Content/toastr.css" rel="stylesheet" />
+                <div class="main-w3l">
+                    <div class="w3layouts-main" style="background-image:url('/template/web/images/bg3.jpg'); margin-top:50px;">
+                        <h2>Login Now</h2>
+
+
+                        @using (Html.BeginForm("Login", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+
+
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
+
+                            <input value="E-MAIL" name="Email" type="email" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-Mail';}" />
+                            <input value="PASSWORD" name="Password" type="password" required="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}" />
+                            <span><input type="checkbox" />Remember Me</span>
+                            <h6><a href="#">Forgot Password?</a></h6>
+                            <div class="clear"></div>
+                            <input type="submit" value="login" name="login">
+
+                        }
+
+                        <p>Don't Have an Account ?<a href="#" onclick="@("window.location.href='" + @Url.Action("Create", "Client") + "'") ;">Register Now</a></p>
+                    </div>
+                </div> 
+            @if (Session["currentUser"] != null)
+            {
+                <script type='text/javascript'>
+    $(document).ready(function(){
+        $("#login").hide();
+    });
+                </script>
+            }
+                @section scripts{
+                    <script src="~/scripts/toastr.js"></script>
+                    <script>
+                        $(function () {
+                            var a = '@TempData["msg"]';
+                            if (a != '')
+                                toastr.error("", a);
+                            //alert("ab" + a)
+                            window.location = '#2249506';
+                        })
+                    </script>
+                }
+
+                
+            <div class="clearfix"> </div>
+            </div>
+
+            <!-- /about-bottom -->
+            <div class="agile_menu" id="menu">
+                <div class="container">
+                    <h3 class="w3_heade_tittle_agile">Spicy Menu</h3>
+                    <p class="sub_t_agileits">It's time to eat...</p>
+                    <div class="menu_w3ls_agile_top_section">
+                        <div class="w3l_chill">
+                            <img src="/template/web/images/ab1.jpg" alt=" " class="img-responsive">
+                        </div>
+                        <div class="ziehharmonika">
+                            <h3>BREAKFAST</h3>
+                            <div>
+                                <div class="w3_agile_recipe-grid">
+                                    <div class="col-md-6 menu-grids">
+                                        <div class="menu-text">
+
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m1.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Pumpkin Spice Pancake Breakfast</h4>
+                                                    <h6>Celebrate fall with three Pumpkin Spice Pancakes prepared fresh on our griddle and topped with whipped cream and cinnamon powdered sugar.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$ 50</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m2.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Old Timer's Breakfast</h4>
+                                                    <h6>Make yourself at home with two eggs* cooked to order with Grits, Sawmill Gravy, homemade Buttermilk Biscuits, real butter, and the best preserves.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$25</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m3.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Apple 'n Cinnamon Oatmeal with Pumpkin Muffin</h4>
+                                                    <h6>Our fresh take on steel-cut oats features golden raisins, dried cranberries, cinnamon, and roasted Fuji apples and pecans.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+
+                                            <div class="menu-text-right">
+                                                <h4>$30</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 menu-grids">
+                                        <div class="menu-text">
+
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m4.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Maple Pepper Bacon Breakfast Sandwich</h4>
+                                                    <h6>This original sandwich is perfect for breakfast y’all day with sweet n’ savory Maple Pepper Bacon, a slice of Sugar Cured Ham, two fried eggs.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$ 50</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m5.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Sunrise Sampler</h4>
+                                                    <h6>Two farm fresh eggs* served with grits, Fried Apples and Hashbrown Casserole plus a sampling of Thick-Sliced Bacon, Smoked Sausage and Country Ham.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+
+                                            <div class="menu-text-right">
+                                                <h4>$25</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m6.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Uncle Herschel's Favorite</h4>
+                                                    <h6>Two farm fresh eggs* with grits and your choice of Fried Apples or Hashbrown Casserole and your choice of meat: Sugar Cured Ham, U.S. Catfish Fillet grilled or fried.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$30</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+
+                            </div>
+                            <h3>LUNCH</h3>
+                            <div>
+                                <div class="w3_agile_recipe-grid">
+                                    <div class="col-md-6 menu-grids">
+                                        <div class="menu-text">
+
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/f1.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Maple Pecan Fried Chicken</h4>
+                                                    <h6>Fall flavors meet a Southern classic with three pieces of golden-fried chicken covered with a rich Maple Mustard Sauce and savory Southern Pecan.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$ 50</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/f2.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Southern Grilled Chicken Caesar</h4>
+                                                    <h6>Smoky Southern grilled chicken breast over chopped Romaine lettuce tossed with Buttermilk Caesar dressing. Topped with shaved Parmesan, grape tomatoes, house-baked Sourdough croutons and two deviled eggs.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$25</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/f3.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Prime Rib French Dip Sandwich Platter</h4>
+                                                    <h6>We hope you enjoy Prime Rib that’s roasted slow and served with fresh grilled onions, beef au jus, Swiss Cheese, and Peppercorn Horseradish Sauce.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+
+                                            <div class="menu-text-right">
+                                                <h4>$30</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 menu-grids">
+                                        <div class="menu-text">
+
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/f4.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Grilled Chicken Salad</h4>
+                                                    <h6>Tender grilled chicken served up over fresh romaine and spring mix with grape tomatoes, shredded Colby cheese, English cucumbers, two deviled eggs.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$ 50</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/f5.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>House Salad</h4>
+                                                    <h6>Fresh greens topped with Thick-Sliced Bacon pieces, grape tomatoes, cucumbers, shredded Colby cheese and house-baked Sourdough croutons. Plus Westminster® Crackers.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+
+                                            <div class="menu-text-right">
+                                                <h4>$25</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/f6.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Open-Faced Roast Beef</h4>
+                                                    <h6>Our own thick-sliced chuck roast and gravy served on seared Sourdough bread. We suggest enjoying it with creamy Mashed Potatoes.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$30</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+
+                            </div>
+                            <h3>TO DAY SPECIALS</h3>
+                            <div>
+                                <div class="w3_agile_recipe-grid">
+                                    <div class="col-md-6 menu-grids">
+                                        <div class="menu-text">
+
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m1.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Monday Baked Chicken n' Dressing</h4>
+                                                    <h6>Juicy Baked Chicken n’ Dressing plus choice of one Country Side. Served with your choice of Buttermilk Biscuits or Corn Muffins and real butter.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$ 50</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m2.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Tuesday Meatloaf & Mashed Potatoes</h4>
+                                                    <h6>Our homemade Meatloaf and Mashed Potatoes plus choice of one Country Side. Served with your choice of Buttermilk Biscuits or Corn Muffins and real butter.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$25</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m3.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Wednesday Chicken Pot Pie</h4>
+                                                    <h6>Fresh-baked Chicken Pot Pie loaded with chunks of chicken and vegetables. Served with your choice of Buttermilk Biscuits or Corn Muffins and real butter.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+
+                                            <div class="menu-text-right">
+                                                <h4>$30</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 menu-grids">
+                                        <div class="menu-text">
+
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m4.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>LThursday Turkey n' Dressing</h4>
+                                                    <h6>Roasted Turkey n’ Dressing plus choice of one Country Side. Served with your choice of Buttermilk Biscuits or Corn Muffins and real butter.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$ 50</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m5.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Friday Fish Fry</h4>
+                                                    <h6>Starting at 11 AM, we serve four Cod fillets, hand-dipped in our own special batter and fried. We suggest enjoying them with Homestyle Fries and Cole Slaw.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+
+                                            <div class="menu-text-right">
+                                                <h4>$25</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/m6.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Saturday Chicken n' Rice</h4>
+                                                    <h6>Starting at 11 AM, we serve our made-from-scratch Chicken n’ Rice. Our chicken tenderloins are simmered in a hearty chicken mushroom gravy and served on top of our new seasoned rice.</h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$30</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+
+
+                            </div>
+                            <h3>DRINKS</h3>
+                            <div>
+                                <div class="w3_agile_recipe-grid">
+                                    <div class="col-md-6 menu-grids">
+                                        <div class="menu-text">
+
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/dd1.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Iced Tea and Lemonade</h4>
+                                                    <h6>Freshly brewed in our stores since 1969. Sweet and unsweetened available. Refillable. Raspberry Iced Tea is also available. </h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$ 50</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/dd2.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Coffee and Hot Tea</h4>
+                                                    <h6>Made with 100% Premium Quality Arabica Coffee Beans for a rich yet smooth taste. Regular or Decaf. Refillable. </h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$25</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/dd3.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Juices and Milk</h4>
+                                                    <h6>Complement any meal with one of our naturally refreshing juices: 100% Florida Valencia Orange, Apple, Ruby Red Grapefruit, and Tomato. </h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+
+                                            <div class="menu-text-right">
+                                                <h4>$30</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 menu-grids">
+                                        <div class="menu-text">
+
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/dd4.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Soft Drinks</h4>
+                                                    <h6>Coca-Cola, Sprite, Mellow Yello, Dr Pepper, Fanta Orange, Diet Coke, Diet Dr Pepper </h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$ 50</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/dd6.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Stewart's 16 oz. Bottled Sodas</h4>
+                                                    <h6>Root Beer, Orange n' Cream, Diet Root Beer </h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+
+                                            <div class="menu-text-right">
+                                                <h4>$25</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                        <div class="menu-text">
+                                            <div class="menu-text-left">
+                                                <div class="rep-w3l-img">
+                                                    <img src="/template/web/images/dd5.jpg" alt=" " class="img-responsive">
+                                                </div>
+                                                <div class="rep-w3l-text">
+                                                    <h4>Milk</h4>
+                                                    <h6>Skim, Reduced-Fat, Whole, Chocolate, Frozen Mug Apple Cider, Hot Chocolate </h6>
+                                                </div>
+
+                                                <div class="clearfix"> </div>
+                                            </div>
+                                            <div class="menu-text-right">
+                                                <h4>$30</h4>
+                                            </div>
+                                            <div class="clearfix"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- services section -->
+            <div class="service-w3l jarallax" id="service">
+                <div class="container">
+                    <h3 class="w3_heade_tittle_agile two">What We Make</h3>
+                    <p class="sub_t_agileits">It's time to eat...</p>
+                    <div class="col-lg-4 col-md-4 col-sm-12 serv-agileinfo1">
+                        <div class="col-lg-12 col-md-12 col-sm-6 serv-wthree1" data-aos="zoom-in">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item">
+                                        <div class="ch-info">
+                                            <div class="ch-info-front ch-img-1">
+                                                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="ch-info-back">
+                                                <h5>Deliverando</h5>
+                                                <p>Best In Services</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4 class="text-center">Birthday party</h4>
+                            <p class="text-center">Planning a Birthday Party? From gourmet chocolates to birthday cakes, Deliverando ships delicious foods from Hannover's top restaurants & bakeries directly to your door. Order online now and have your items shipped per your event schedule.</p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6 serv-wthree2" data-aos="zoom-in">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item">
+                                        <div class="ch-info">
+                                            <div class="ch-info-front ch-img-2"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+                                            <div class="ch-info-back">
+                                                <h5>Deliverando</h5>
+                                                <p>Best In Services</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4 class="text-center">Private Dining</h4>
+                            <p class="text-center">Deliverando restaurants offer private dining and unique party venues for your personal or business event. We create a bespoke service tailored to your needs</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 serv-agileinfo2">
+                        <div class="col-lg-12 col-md-12 col-sm-6 serv-wthree4" data-aos="zoom-in">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item">
+                                        <div class="ch-info">
+                                            <div class="ch-info-front ch-img-3"><i class="fa fa-user" aria-hidden="true"></i></div>
+                                            <div class="ch-info-back">
+                                                <h5>Deliverando</h5>
+                                                <p>Best In Services</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4 class="text-center">Membership</h4>
+                            <p class="text-center">You ! Yeah You ! Come join us and discover our offers ! We have a lot of surprises for you ! </p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 serv-agileinfo3">
+                        <div class="col-lg-12 col-md-12 col-sm-6 serv-wthree6" data-aos="zoom-in">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item">
+                                        <div class="ch-info">
+                                            <div class="ch-info-front ch-img-4"><i class="fa fa-shield" aria-hidden="true"></i></div>
+                                            <div class="ch-info-back">
+                                                <h5>Deliverando</h5>
+                                                <p>Best In Services</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4 class="text-center">Quick Delivery's Service</h4>
+                            <p class="text-center">The average delivery time is 60 minutes or less in most cases. But delivery times can be affected based on traffic and/or weather..We try always to be at the right Time and satisfy your requirement !</p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-6 serv-wthree5" data-aos="zoom-in">
+                            <ul class="ch-grid">
+                                <li>
+                                    <div class="ch-item">
+                                        <div class="ch-info">
+                                            <div class="ch-info-front ch-img-5"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
+                                            <div class="ch-info-back">
+                                                <h5>Deliverando</h5>
+                                                <p>Best In Services</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h4 class="text-center">Healthy Food</h4>
+                            <p class="text-center">No need to throw your diet into disarray. These nutritious and delicious dishes will put a major spring in your step</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- /services section -->
+            <!-- team -->
+            <div class="team portfolio " id="team">
+                <div class="container">
+                    <h3 class="w3_heade_tittle_agile">Best Of Restaurant</h3>
+                    <p class="sub_t_agileits">Take a look of our amazing restaurants...</p>
+                    <div class="w3layouts-grids">
+                        <div class="col-md-3 wthree_team_grid">
+                            <div class="wthree_team_grid1">
+                                <div class="hover14 column">
+                                    <div>
+                                        <figure><img src="/template/web/images/chef3.jpg" alt=" " class="img-responsive" /></figure>
+                                    </div>
+                                </div>
+                                <div class="wthree_team_grid1_pos">
+                                    <h4>Lucca</h4>
+                                </div>
+                            </div>
+                            <div class="wthree_team_grid2">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 wthree_team_grid">
+                            <div class="wthree_team_grid1">
+                                <div class="hover14 column">
+                                    <div>
+                                        <figure><img src="/template/web/images/chef4.jpg" alt=" " class="img-responsive" /></figure>
+                                    </div>
+                                </div>
+                                <div class="wthree_team_grid1_pos">
+                                    <h4>Play Off</h4>
+                                </div>
+                            </div>
+                            <div class="wthree_team_grid2">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 wthree_team_grid">
+                            <div class="wthree_team_grid1">
+                                <div class="hover14 column">
+                                    <div>
+                                        <figure><img src="/template/web/images/chef1.jpg" alt=" " class="img-responsive" /></figure>
+                                    </div>
+                                </div>
+                                <div class="wthree_team_grid1_pos">
+                                    <h4>Guru</h4>
+                                </div>
+                            </div>
+                            <div class="wthree_team_grid2">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 wthree_team_grid">
+                            <div class="wthree_team_grid1">
+                                <div class="hover14 column">
+                                    <div>
+                                        <figure><img src="/template/web/images/chef2.jpg" alt=" " class="img-responsive" /></figure>
+                                    </div>
+                                </div>
+                                <div class="wthree_team_grid1_pos">
+                                    <h4>La Cantina</h4>
+                                </div>
+                            </div>
+                            <div class="wthree_team_grid2">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //team -->
+            <!-- services-bottom -->
+            <div class="services-bottom">
+                <div class="col-md-5 wthree_services_bottom_right">
+                    <section class="slider">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <div class="w3_agile_services_bottom_right_grid">
+                                        <p class="w3layouts_head_slide">Spicy <span>food</span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w3_agile_services_bottom_right_grid1">
+                                        <p class="w3layouts_head_slide">Tasty <span>Food</span></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="w3_agile_services_bottom_right_grid2">
+                                        <p class="w3layouts_head_slide">fresh <span>Food</span></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-7 wthree_services_bottom_left">
+                    <div class="wthree_services_bottom_left_grid">
+                        <div class="col-md-6 w3_agileits_services_bottom_l_grid">
+                            <div class="agile_services_bottom_l_grid1">
+                                <img src="/template/web/images/d11.jpg" alt=" " class="img-responsive" />
+                                <div class="w3_service_bottom_grid_pos">
+                                    <h3>Ready to Eat</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 w3_agileits_services_bottom_r_grid">
+                            <h4>Flavorful Food</h4>
+                            <p>
+                                Proof that you can have great food every day. Check out our selection of wallet-friendly eats.
+                            </p>
+
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="wthree_services_bottom_left_grid">
+                        <div class="col-md-6 w3_agileits_services_bottom_r_grid">
+                            <h4>Delicious Food</h4>
+                            <p>
+                                Pure indulgence that can turn an ordinary day into an unforgettable one. Comfort food at its very best.
+                            </p>
+
+                        </div>
+                        <div class="col-md-6 w3_agileits_services_bottom_l_grid">
+                            <div class="agile_services_bottom_l_grid1">
+                                <img src="/template/web/images/d2.jpg" alt=" " class="img-responsive" />
+                                <div class="w3_service_bottom_grid_pos">
+                                    <h3>Ready to Eat</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+            <!-- //services-bottom -->
+            <!-- Portfolio -->
+            <div class="portfolio" id="specials">
+                <div class="container">
+                    <h3 class="w3_heade_tittle_agile">Our Specials</h3>
+                    <p class="sub_t_agileits">Ready to Eat...</p>
+
+                    <div class="tabs tabs-style-bar">
+                        <nav>
+                            <ul>
+                                <li><a href="#section-bar-1" class="icon icon-box"><span>DESSERTS</span></a></li>
+                                <li><a href="#section-bar-2" class="icon icon-display"><span>SOUPS</span></a></li>
+                                <li><a href="#section-bar-3" class="icon icon-upload"><span>DINNER</span></a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="content-wrap">
+
+                            <!-- Tab-1 -->
+                            <section id="section-bar-1" class="agileits w3layouts">
+                                <div class="gallery-grids">
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d1.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d1.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d2.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d2.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d3.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d3.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d4.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d4.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d5.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d5.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d6.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d6.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </section>
+                            <!-- //Tab-1 -->
+                            <!-- Tab-2 -->
+                            <section id="section-bar-2" class="agileits w3layouts">
+                                <div class="gallery-grids">
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/s1.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/s1.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/s2.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/s2.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/s3.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/s3.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/s4.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/s4.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/s5.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/s5.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/s6.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/s6.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </section>
+                            <!-- //Tab-2 -->
+                            <!-- Tab-3 -->
+                            <section id="section-bar-3" class="agileits w3layouts">
+                                <div class="gallery-grids">
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d7.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d7.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d8.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d8.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d9.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d9.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d10.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d10.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d11.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d11.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 gallery-top">
+                                        <a href="/template/web/images/d12.jpg" class="swipebox">
+                                            <figure class="effect-apollo">
+                                                <img src="/template/web/images/d12.jpg" alt="Flavorful" class="img-responsive">
+                                                <figcaption></figcaption>
+                                            </figure>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </section>
+                            <!-- //Tab-3 -->
+
+                        </div><!-- //Content -->
+                    </div><!-- //Tabs -->
+
+                </div>
+            </div>
+            <!-- //Portfolio -->
+            <!-- stats -->
+            <div class="stats jarallax" id="stats">
+                <div class="container">
+                    <div class="inner_w3l_agile_grids">
+                        <div class="col-md-3 w3layouts_stats_left w3_counter_grid">
+                            <i class="fa fa-building-o" aria-hidden="true"></i>
+                            <p class="counter">45</p>
+                            <h3>Branches</h3>
+                        </div>
+                        <div class="col-md-3 w3layouts_stats_left w3_counter_grid1">
+                            <i class="fa fa-smile-o" aria-hidden="true"></i>
+                            <p class="counter">165</p>
+                            <h3>Happy Clients</h3>
+                        </div>
+
+                        <div class="col-md-3 w3layouts_stats_left w3_counter_grid3">
+                            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                            <p class="counter">245</p>
+                            <h3>Our Events</h3>
+                        </div>
+                        <div class="col-md-3 w3layouts_stats_left w3_counter_grid2">
+                            <i class="fa fa-trophy" aria-hidden="true"></i>
+                            <p class="counter">563</p>
+                            <h3>Awards</h3>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //stats -->
+            <!-- /contact -->
+            <div class="contact-main-agile-info jarallax" id="contact">
+                <div class="container">
+                    <h3 class="w3_heade_tittle_agile">Contact Us</h3>
+                    <p class="sub_t_agileits">Get In Touch...</p>
+
+                    <div class="contact-top-agileits">
+                        <div class="col-md-4 contact-grid ">
+                            <div class="contact-grid1 agileits-w3layouts">
+                                <i class="fa fa-location-arrow"></i>
+                                <div class="con-w3l-info">
+                                    <h4>Address </h4>
+                                    <p>Am Klagesmarkt 29-30<span> Hannover</span></p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 contact-grid">
+                            <div class="contact-grid2 w3">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <div class="con-w3l-info">
+                                    <h4>Call Us</h4>
+                                    <p>089-435710100<span></span></p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 contact-grid">
+                            <div class="contact-grid3 w3l">
+                                <i class="fa fa-envelope"></i>
+                                <div class="con-w3l-info">
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:info@affili.net">info@affili.net</a>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-6 map-grids">
+                        <h3>Basic Food Order Form</h3>
+                        <div class="book-form agileits-login">
+                            @using (Html.BeginForm("Save_Bestellung", "Bestellung", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.ValidationSummary(true)
+
+                                <div class="phone_email" style="text-align:left;">
+                                    <label>FIRST NAME : </label>
+                                    <div class="form-text">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <input type="text" name="FirstName" placeholder="Your First Name" required="">
+                                    </div>
+                                </div>
+                                <div class="phone_email" style="text-align:left; margin-left:15px;">
+                                    <label>LAST NAME : </label>
+                                    <div class="form-text">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <input type="text" name="LastName" placeholder="Your Last Name" required="">
+                                    </div>
+                                </div>
+                                <div class="phone_email phone_email1" style="text-align:left;">
+                                    <label>EMAIL : </label>
+                                    <div class="form-text">
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                        <input type="email" name="email" placeholder="Email" required="" style="margin-top:0px;">
+                                        @*@Html.ValidationMessage("email", new { @class = "text-danger" })*@
+                                        <span class="field-validation-valid text-danger" data-valmsg-for="the_field_name" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+
+                                <div class="phone_email" style="text-align:left;">
+                                    <label>PHONE NUMBER : </label>
+                                    <div class="form-text">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        <input type="text" name="Phone" placeholder="Phone no" required="">
+                                    </div>
+                                </div>
+                                <div class="phone_email phone_email1" style="text-align:left;float:left;">
+                                    <label>ADDRESS : </label>
+                                    <div class="form-text">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <input type="text" name="address" placeholder="Your Address" required="" style="margin-top:0px; width:506px;">
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="agileits_reservation_grid">
+                                    <div class="span1_of_1" style="text-align:left;">
+                                        <label>DATE : </label>
+                                        <div class="book_date">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            @*@Html.TextBoxFor(model => model.Date, new { id = "datepicker" })*@
+                                            <input id="datepicker" name="Date" type="text" value="dd/mm/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required="">
+                                        </div>
+                                    </div>
+                                    <div class="span1_of_1" style="text-align:left;">
+                                        <!-- start_section_room -->
+                                        <label>TIME : </label>
+                                        <div class="section_room">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <select id="country" name="Time" onchange="change_country(this.value)" class="frm-field required">
+                                                <option value="Lunch">Lunch</option>
+                                                <option value="Dinner">Dinner</option>
+                                                <option value="Breal Fast">Break Fast</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="span1_of_1" style="text-align:left;">
+                                        <label>NO.OF PEOPLE : </label>
+                                        <!-- start_section_room -->
+                                        <div class="section_room">
+                                            <i class="fa fa-users" aria-hidden="true"></i>
+                                            <select id="country1" name="Nbre_P" onchange="change_country(this.value)" class="frm-field required sect">
+                                                <option value="1">1 People</option>
+                                                <option value="2">2 People</option>
+                                                <option value="3">3 People</option>
+                                                <option value="4">4 People</option>
+                                                <option value="More">More</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="wthree-text" style="text-align:left;">
+                                    <h6>Items</h6>
+                                    <ul>
+                                        <li>
+                                            <label class="anim">
+                                                <input type="checkbox" class="checkbox" value="Soups" name="Items">
+                                                <span>Soups</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="anim">
+                                                <input type="checkbox" class="checkbox" value="Burger" name="Items">
+                                                <span>Burger</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="anim">
+                                                <input type="checkbox" class="checkbox" value="Drinks" name="Items">
+                                                <span>Drinks</span>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <label class="anim">
+                                                <input type="checkbox" class="checkbox" value="Desserts" name="Items">
+                                                <span>Desserts</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <input type="submit" value="Order Now" style="float:left;">
+
+                            }
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 map_agile">
+
+                        @*<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387145.86654334463!2d-74.25818682528057!3d40.70531100753592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1497241987900" allowfullscreen></iframe>*@
+
+                        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBOGr0zhheEibq9Gcn55DaVatSpbQP-3GE'></script><div style='overflow:hidden;height:799.4px;width:100%;'>
+                            <div id='gmap_canvas' style='height:100%;width:520px;'></div>
+                            <style>
+                                #gmap_canvas img {
+                                    max-width: none !important;
+                                    background: none !important;
+                                }
+                            </style>
+                        </div> <a href='http://casinos-1.com'>casinos-1.com</a>
+                        <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=c55cd61f08514ba52d0b28d793953517c0185723'></script>
+                        <script type='text/javascript'>function init_map() { var myOptions = { zoom: 12, center: new google.maps.LatLng(52.3800447, 9.728811599999972), mapTypeId: google.maps.MapTypeId.ROADMAP }; map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(52.3800447, 9.728811599999972) }); infowindow = new google.maps.InfoWindow({ content: '<strong>Affilinet</strong><br>Am Klagesmarkt<br>30159 Hannover<br>' }); google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker); } google.maps.event.addDomListener(window, 'load', init_map);</script>
+</body>
+</html>
+
+ </div>
+<div class="clearfix"></div>
+        </div>
+    </div>
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <h4>Subscribe to <span>Newsletter</span></h4>
+        <form action="#" method="post">
+            <input type="email" name="Email" placeholder="Enter Your Email..." required="">
+            <input type="submit" value="Send">
+        </form>
+        <div class="agile_footer_copy">
+            <div class="w3agile_footer_grids">
+                <div class="col-md-4 w3agile_footer_grid">
+                    <h3>About Us</h3>
+                    <p>
+                        Hannover is a colorful city with architectural gems for all to see. Its narrow streets, half timbered houses and broad shopping avenues certainly catch the eye.
+                        </span>
+                    </p>
+
+                </div>
+                <div class="col-md-4 w3agile_footer_grid">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>Am Am Klagesmarkt 29-30, <span>30159 Hannover.</span></li>
+                        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@affili.net">info@affili.net</a></li>
+                        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 w3agile_footer_grid w3agile_footer_grid1">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><a class="scroll" href="#specials">Specials</a></li>
+                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><a class="scroll" href="#service">Services</a></li>
+                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><a class="scroll" href="#menu">Menu</a></li>
+                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><a class="scroll" href="#login">Login</a></li>
+                        <li><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><a class="scroll" href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="w3_agileits_copy_right_social">
+            <div class="footer-w3l" style="margin-left:70px; margin-bottom:40px;">
+                <p>&copy; 2017 Delivery's Application. All rights reserved | Designed by <a href="http://affili.net">Affilinet GmbH</a></p>
+            </div>
+            <div class="col-md-6 w3_agile_copy_right">
+                <ul class="agileinfo_social_icons" style="width:700px;margin-right:220px;">
+                    <li><a href="#" class="w3_agileits_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="wthree_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="agileinfo_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!-- //footer -->
+<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- js -->
+
+<script src="/template/web/js/jquery-2.2.3.min.js"></script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="/template/web/js/move-top.js"></script>
+<script type="text/javascript" src="/template/web/js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- Calendar -->
+
+<script src="/template/web/js/jquery-ui.js"></script>
+<script>
+    $(function ()
+    {
+        $("#datepicker").datepicker({ minDate: 0, dateFormat: 'dd/mm/yy' });
+	});
+</script>
+
+
+<!-- //Calendar -->
+<script src="/template/web/js/JiSlider.js"></script>
+<script>
+			$(window).load(function () {
+				$('#JiSlider').JiSlider({color: '#fff', start: 3, reverse: true}).addClass('ff')
+			})
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script src="/template/web/js/ziehharmonika.js"></script>
+<script>
+$(document).ready(function() {
+		$('.ziehharmonika').ziehharmonika({
+			collapsible: true,
+			prefix: ''
+		});
+	});
+</script>
+<!-- stats -->
+<script src="/template/web/js/jquery.waypoints.min.js"></script>
+<script src="/template/web/js/jquery.countup.js"></script>
+<script>
+			$('.counter').countUp();
+</script>
+<!-- //stats -->
+<!-- Gallery-Tab-JavaScript -->
+<script src="/template/web/js/cbpFWTabs.js"></script>
+<script>
+				(function() {
+					[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+						new CBPFWTabs( el );
+					});
+				})();
+</script>
+<!-- //Gallery-Tab-JavaScript -->
+<!-- Swipe-Box-JavaScript -->
+<script src="/template/web/js/jquery.swipebox.min.js"></script>
+<script type="text/javascript">
+					jQuery(function($) {
+						$(".swipebox").swipebox();
+					});
+</script>
+<!-- //Swipe-Box-JavaScript -->
+<!-- bootstrap-pop-up -->
+<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                Flavorful
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <section>
+                <div class="modal-body">
+                    <img src="/template/web/images/d11.jpg" alt=" " class="img-responsive" />
+                    <p>
+
+                        <i>
+
+                        </i>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- //bootstrap-pop-up -->
+<!-- flexSlider -->
+<script defer src="/template/web/js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+		$(window).load(function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		  });
+		});
+</script>
+<!-- //flexSlider -->
+<!-- start-smoth-scrolling -->
+<script src="/template/web/js/jarallax.js"></script>
+<script src="/template/web/js/SmoothScroll.min.js"></script>
+<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+</script>
+
+<script src="/template/web/js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

@@ -1,0 +1,305 @@
+﻿@*@model IEnumerable<Delivery.Models.Client>*@
+@model IList<Delivery.Models.Client>
+
+<html lang="zxx">
+<head>
+
+    <title>Deliverando : Food to your Home Website</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Flavorful Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="/template/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Portfolio-CSS -->
+    <link rel="stylesheet" href="/template/web/css/swipebox.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/template/web/css/flexslider.css" type="text/css" media="screen" property="" />
+    <link href="/template/web/css/services.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="/template/web/css/jquery-ui.css" />
+    <link href="/template/web/css/ziehharmonika.css" rel="stylesheet" type="text/css">
+    <link href="/template/web/css/team.css" rel="stylesheet" type="text/css">
+    <link href="/template/web/css/JiSlider.css" rel="stylesheet">
+    <link href="/template/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/smart_login/web/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <!-- font-awesome icons -->
+    <link href="/template/web/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+</head>
+@{
+    Layout = null;
+}
+
+<body style="background-image: url('/template/web/images/fd.jpg'); margin: 0;">
+    <div class="main" id="home" style="background-color:transparent; margin-top:-18px;border-color:black; border-bottom-width:thick;">
+        <!-- banner -->
+        <div class="header-bottom">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="logo">
+                        <h1><a class="navbar-brand" href="~/Home/Index"><span>D</span>eliverando <i class="fa fa-spoon" aria-hidden="true"></i> <p>Food...Ready to Eat</p></a></h1>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                    <nav>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a class="scroll" href="~/Home/Index" style="color:white;">Home</a></li>
+                            <li><a href="#about" class="scroll hvr-bounce-to-bottom" style="color:white;">About</a></li>
+                            <li><a href="#contact" class="scroll hvr-bounce-to-bottom" style="color:white;">Contact Us</a></li>
+                            <li style="margin-left:10px; margin-top:16px; font-style:oblique;font-size:17px; font-family: 'Poppins', sans-serif; font-weight: 600;color:#ffffff;">
+                                Welcome @if (Session["currentUser"] != null)
+                                {  @Session["currentUser"].ToString()}
+                            </li>
+                            <li style="margin-left:10px; margin-top:0px; font-style:oblique;font-size:17px; font-family: 'Poppins', sans-serif; font-weight: 600;color:white;">
+                                    @if (Session["currentUser"] != null)
+                                    { @Html.ActionLink("Log Out","LogOut","Client", new { @style = "color:white;" }) }
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+
+
+    <div style="float:left; width: 50%; margin-top:100px;">
+        <div style="text-align:left;; margin-left:55px;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">Your Infos</div><br /><br />
+        <table style="border:none; margin-top:0px; margin-left:30px; border-spacing:35px; border-collapse:separate;">
+            @for (int j=0;  j<5; j++)
+            {
+                if (Model[j].LastName == Session["currentUser"].ToString())
+                {
+                    <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                        <th>
+                            @Html.DisplayNameFor(model => Model[j].FirstName)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(modelItem => Model[j].FirstName)
+                        </td>
+                    </tr>
+                    <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                        <th>
+                            @Html.DisplayNameFor(model => Model[j].LastName)
+                        </th>
+                        <td>
+                            @Html.DisplayFor(modelItem => Model[j].LastName)
+                        </td>
+                    </tr>
+                        <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                            <th>
+                                @Html.DisplayNameFor(model => Model[j].Email)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model[j].Email)
+                            </td>
+                        </tr>
+                        <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                            <th>
+                                @Html.DisplayNameFor(model => Model[j].Phone)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model[j].Phone)
+                            </td>
+                        </tr>
+                        <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                            <th>
+                                @Html.DisplayNameFor(model => Model[j].Address)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model[j].Address)
+                            </td>
+                        </tr>
+                        <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                            <th>
+                                @Html.DisplayNameFor(model => Model[j].Password)
+                            </th>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model[j].Password)
+                            </td>
+                        </tr>
+                        <th>@using (Html.BeginForm("Edit", "Client", new { Id = Model[j].ClientId }, FormMethod.Post, null))
+                        {
+                            <input type="submit" value="Edit my Infos" /> 
+                        }
+                       @using (Html.BeginForm("Delete", "Client", new { Id = Model[j].ClientId }, FormMethod.Post, null))
+                       { 
+                           <input type="submit" value="Delete my profile" />
+                       } 
+                        </th >
+
+
+
+
+
+                }
+                       }
+        </table>
+    </div>
+    @*</div>*@
+    @*<div class="clearfix"></div>*@
+    @*<div class="col-md-6 map-grids" style="">*@
+
+    <div class="book-form agileits-login">
+        <div style="float:right; width: 50%;margin-top:60px;display:grid; grid-template-columns: 1fr 1fr; grid-gap: 20px; border-width:2px;border-color:aqua;">
+            <div style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;text-align:left;">You can order now :</div><br />
+            @using (Html.BeginForm("Save_Bestellung", "Bestellung", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })   
+
+                <div class="clearfix"></div>
+                <div class="agileits_reservation_grid">
+                    <div class="span1_of_1" style="text-align:left;">
+                        <label>DATE : </label>
+                        <div class="book_date">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                            <input id="datepicker" name="Date" type="text" value="dd/mm/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'dd/mm/yyyy';}" required="">
+                        </div>
+                    </div>
+                    <div class="span1_of_1" style="text-align:left;">
+                        <!-- start_section_room -->
+                        <label>TIME : </label>
+                        <div class="section_room">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <select id="country" name="Time" onchange="change_country(this.value)" class="frm-field required">
+                                <option value="Lunch">Lunch</option>
+                                <option value="Dinner">Dinner</option>
+                                <option value="Breal Fast">Break Fast</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="span1_of_1" style="text-align:left;">
+                        <label>NO.OF PEOPLE : </label>
+                        <!-- start_section_room -->
+                        <div class="section_room">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            <select id="country1" name="Nbre_P" onchange="change_country(this.value)" class="frm-field required sect">
+                                <option value="1">1 People</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="More">More</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                        <div class="wthree-text" style="text-align:left;">
+                            <h6>Items</h6>
+                            <ul>
+                                <li>
+                                    <label class="anim">
+                                        <input type="checkbox" class="checkbox" value="Soups" name="Items">
+                                        <span>Soups</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="anim">
+                                        <input type="checkbox" class="checkbox" value="Burger" name="Items">
+                                        <span>Burger</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="anim">
+                                        <input type="checkbox" class="checkbox" value="Drinks" name="Items">
+                                        <span>Drinks</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="anim">
+                                        <input type="checkbox" class="checkbox" value="Desserts" name="Items">
+                                        <span>Desserts</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="clearfix"> </div>
+                        </div>
+
+
+
+                for (int i = 0; i < Model.Count; i++)
+                {
+                    if (Model[i].LastName == Session["currentUser"].ToString())
+                    {
+                    @Html.HiddenFor(modelItem => Model[i].LastName)
+                    @Html.HiddenFor(modelItem => Model[i].FirstName)
+                    @Html.HiddenFor(modelItem => Model[i].Phone)
+                    @Html.HiddenFor(modelItem => Model[i].Email)
+                    @Html.HiddenFor(modelItem => Model[i].Address)
+                    }
+                }
+                <input type="submit" value="Order Now" style="float:left;">
+            }
+        </div>
+    </div>
+</body>
+</html>
+<div class="about" id="about" style="background-color:transparent; margin-top:750px;">
+    <h3 class="w3_heade_tittle_agile">About Us</h3>
+    <p style="width:40%; margin-left:480px; margin-top:50px;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">With short delivery times and a friendly service, Deliverando ticks all the right boxes when it comes to take away deliveries. There’s also the option of collective orders with work colleagues, ideal if you’re still at the office and feeling a little peckish. Once you’ve found a meal of your choice, place an order and pay online through Deliverando’s secure platform.</p>
+</div>
+<div class="contact-main-agile-info jarallax" id="contact">
+    <div class="container">
+        <h3 class="w3_heade_tittle_agile">Contact Us</h3>
+        <p class="sub_t_agileits">Get In Touch...</p>
+
+        <div class="contact-top-agileits">
+            <div class="col-md-4 contact-grid ">
+                <div class="contact-grid1 agileits-w3layouts">
+                    <i class="fa fa-location-arrow"></i>
+                    <div class="con-w3l-info">
+                        <h4>Address </h4>
+                        <p>Am Klagesmarkt 29-30<span> Hannover</span></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-md-4 contact-grid">
+                <div class="contact-grid2 w3">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <div class="con-w3l-info">
+                        <h4>Call Us</h4>
+                        <p>089-435710100<span></span></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-md-4 contact-grid">
+                <div class="contact-grid3 w3l">
+                    <i class="fa fa-envelope"></i>
+                    <div class="con-w3l-info">
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@affili.net">info@affili.net</a>
+
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            </div>
+        </div>
+        </div>
+        <script src="/template/web/js/jquery-2.2.3.min.js"></script>
+        <script src="/template/web/js/jquery-ui.js"></script>
+        <script src="/template/web/js/JiSlider.js"></script>
+        <script>
+            $(function () {
+                $("#datepicker").datepicker({ minDate: 0, dateFormat: 'dd/mm/yy' });
+            });
+        </script>

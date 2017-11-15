@@ -1,0 +1,186 @@
+﻿@model IEnumerable<Delivery.Models.Bestellung>
+
+<html lang="zxx">
+<head>
+    <title>Deliverando : Food to your Home Website</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Flavorful Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="/template/web/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Portfolio-CSS -->
+    <link rel="stylesheet" href="/template/web/css/swipebox.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/template/web/css/flexslider.css" type="text/css" media="screen" property="" />
+    <link href="/template/web/css/services.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="/template/web/css/jquery-ui.css" />
+    <link href="/template/web/css/ziehharmonika.css" rel="stylesheet" type="text/css">
+    <link href="/template/web/css/team.css" rel="stylesheet" type="text/css">
+    <link href="/template/web/css/JiSlider.css" rel="stylesheet">
+    <link href="/template/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/smart_login/web/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/Content/toastr.min.css" rel="stylesheet" />
+    <!-- font-awesome icons -->
+    <link href="/template/web/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <link href="//fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="~/scripts/toastr.js"></script>
+    <script src="~/scripts/toastr.min.js"></script>
+</head>
+@{
+    Layout = null;
+}
+
+<body style="background-image: url('/template/web/images/book.jpg'); margin: 0;">
+    <div class="main" id="home" style="background-color:transparent; margin-top:-18px;border-color:black; border-bottom-width:thick;">
+        <!-- banner -->
+        <div class="header-bottom">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="logo">
+                        <h1><a class="navbar-brand" href="~/Home/Index"><span>D</span><span style="color:white;">eliverando</span><i class="fa fa-spoon" aria-hidden="true"></i> <p>Food...Ready to Eat</p></a></h1>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                    <nav>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a class="scroll" href="~/Home/Index" style="color:white;">Home</a></li>
+                            @*<li><a href="#about" class="scroll hvr-bounce-to-bottom" style="color:white;">About</a></li>
+                            <li><a href="#contact" class="scroll hvr-bounce-to-bottom" style="color:white;">Contact Us</a></li>*@
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+
+
+    <div style="float:left; width: 50%; margin-top:47px;margin-left:350px;margin-bottom:100px;">
+        <div style="text-align:left;; margin-left:55px;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">Your Order</div><br /><br />
+        <table style="border:none; margin-top:0px; margin-left:30px; border-spacing:35px; border-collapse:separate;">
+            @foreach (var item in Model.Reverse().Take(1))
+            {
+                <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                </tr>
+                <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                </tr>
+                <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Address)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                </tr>
+                <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                </tr>
+                <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Phone)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                </tr>
+                <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Date)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                </tr>
+                <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Time)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+                </tr>
+                <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nbre_P)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nbre_P)
+                    </td>
+                </tr>
+                <tr style="font-style:oblique;font-size:16px; font-family: 'Poppins', sans-serif; font-weight: 600;">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Items)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Items)
+                    </td>
+                </tr>
+                 
+            @*<td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    </td>
+                </tr>*@
+            }
+
+            </table>
+       
+            <input type="submit" value="Confirm" style="margin-left:-270px;" onclick="SendEmail()">
+
+       
+            </div>
+   
+        </body>
+
+  </html>
+<script>
+    var SendEmail = function () {
+        
+        jQuery.ajax({
+            type: "POST",
+            url: "/Bestellung/SendMailToUser",
+           
+          
+            success: function (data) {
+               
+                toastr.success("", "You email has been sent successfully :)");
+                
+            }
+        })
+    }
+</script>
+
